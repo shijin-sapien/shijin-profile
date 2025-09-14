@@ -1,0 +1,1 @@
+web: gunicorn shijin_profile.wsgi
