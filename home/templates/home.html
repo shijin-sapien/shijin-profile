@@ -125,6 +125,52 @@
       background: #232427;
       margin-left: 40px;
     }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px #0002;
+      overflow: hidden;
+    }
+    .about, .projects {
+      padding: 48px 40px;
+    }
+    .about {
+      background: linear-gradient(120deg, #4f8cff 60%, #6ec6ff 100%);
+      color: #fff;
+      text-align: center;
+    }
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 2px 12px #0003;
+      margin: 0 auto 24px auto;
+      display: block;
+      background: #e0e0e0;
+    }
+    .about h1 { margin: 0 0 12px 0; font-size: 2.5rem; }
+    .about p { font-size: 1.15rem; margin: 12px 0; }
+    .projects { background: #fff; }
+    .projects h2 { margin-top: 0; font-size: 2rem; }
+    .project-list { display: flex; flex-wrap: wrap; gap: 28px; justify-content: center; }
+    .project {
+      flex: 1 1 240px;
+      background: #f0f4ff;
+      border-radius: 10px;
+      padding: 24px;
+      box-shadow: 0 1px 6px #0001;
+      min-width: 220px;
+      max-width: 300px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .project:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 6px 24px #4f8cff33;
+    }
     @media (max-width: 900px) {
       .main-section {
         flex-direction: column;
@@ -137,6 +183,14 @@
         max-width: 340px;
         height: auto;
       }
+    }
+    @media (max-width: 700px) {
+      .container { margin: 10px; }
+      .about, .projects { padding: 24px 10px; }
+      .project-list { flex-direction: column; gap: 18px; }
+      .project { max-width: 100%; }
+      .about h1 { font-size: 2rem; }
+      .about p { font-size: 1rem; }
     }
   </style>
 </head>
@@ -191,5 +245,31 @@
     </div>
     <img src="/home/shijin/Downloads/InBio.jpg" alt="Profile" class="profile-img">
   </section>
+  <div class="container">
+    <section class="about">
+      <img src="/home/shijin/Downloads/InBio.jpg" alt="Profile" class="profile-pic">
+      <h1>About Me</h1>
+      <p>
+        I am a passionate developer with expertise in creating dynamic and beautiful web pages. I have a knack for problem-solving and a deep love for coding.
+      </p>
+    </section>
+    <section class="projects">
+      <h2>My Projects</h2>
+      <div class="project-list">
+        <div class="project">
+          <h3>Project Title 1</h3>
+          <p>Short description of the project.</p>
+        </div>
+        <div class="project">
+          <h3>Project Title 2</h3>
+          <p>Short description of the project.</p>
+        </div>
+        <div class="project">
+          <h3>Project Title 3</h3>
+          <p>Short description of the project.</p>
+        </div>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
